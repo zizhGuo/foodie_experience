@@ -1,0 +1,47 @@
+<%- include("../partials/header_1") %>
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Welcome To Foodie Park!</h1>
+            <p>View our hand-picked food tours and home restaurants from all over the world</p>
+            <p>
+               <a class="btn btn-primary btn-large" href="/experiences/new">Add New Experience</a>
+            </p>
+        </div>
+    </header>
+
+    <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <% experiences.forEach(function(experience){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                    <% experience.images_host.forEach(function(image){ %>
+                        <img class="card-img-top" src="/images/<%= image %> ">
+                    <% });%>
+                        
+                    <!-- <img class="card-img-top" src="/images/01/2a76524e-e7c8-4d33-aa44-1df00a93760a.jpg"> -->
+                    <!-- <img class="card-img-top" src="https://a0.muscache.com/im/pictures/lombard/MtTemplate-230824-media_library/original/d9c0eed6-04cf-4c4b-bccb-fa4043fa66ef.jpeg?im_w=1680"> -->
+                    <div class="caption card-title">
+                        <h4><%= experience.title %></h4>
+                    </div>
+                    <div class = "card-text">
+                        <h6><%= experience.rating %></h6>
+                    </div>
+                    <div class = "card-text">
+                        <p><%= experience.duration %></p>
+                        <p><%= experience.location %></p>
+                        <p><%= experience.group %></p>
+                    </div>
+                    <p>
+                        <a href="/experiences/<%= experience._id %>" class="btn btn-primary">More Info</a>
+                        <!-- <a href="/experiences/" class="btn btn-primary">More Info</a> -->
+                    </p>                    
+                    <p>
+                        <a href="/experiences/<%= experience._id %>/edit" class="btn btn-primary">Edit</a>
+                        <!-- <a href="/experiences/" class="btn btn-primary">More Info</a> -->
+                    </p>
+                </div>
+            </div>
+            <% }); %>
+    </div>
+</div>
+<%- include("../partials/footer_1") %>

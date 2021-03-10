@@ -1,0 +1,62 @@
+<%- include("../partials/header_1") %>
+<div class="ui main text container segment">
+    <!-- <h1>Hello world!</h1> -->
+    <div class="ui huge header"> Edit Exeperience</div>
+    <form class="ui form" action="/experiences/<%= experience._id %>?_method=PUT" method="POST">
+        <div class="field">
+            <label>Title</label>
+            <input type="text" name="experience[title]" placeholder="title" value="<%= experience.title%>">
+        </div>
+        <div class="field">
+            <label>Price</label>
+            <input type="number" name="experience[price]" placeholder="price" value="<%= experience.price%>">
+        </div>
+        <div class="field">
+            <label>Location</label>
+            <input type="text" name="experience[location]" placeholder="location" value="<%= experience.location%>">
+        </div>
+        <div class="field">
+            <label>Duration</label>
+            <input type="number" name="experience[duration]" placeholder="duration" value="<%= experience.duration%>">
+        </div>
+        <div class="field">
+            <label>Group</label>
+            <input type="number" name="experience[group]" placeholder="group" value="<%= experience.group%>">
+        </div>
+        <div class="field">
+            <label>Language</label>
+            <input type="text" name="experience[language]" placeholder="language" value="<%= experience.language%>">
+        </div>
+        <div class="field">
+            <label>Description</label>
+            <textarea type="text" name="experience[description]" placeholder="description"><%= experience.description%></textarea>
+        </div>
+        <div class="Images">
+            <label>Title</label>
+            <input type="text" name="experience[images_host][0]" placeholder="host images" value="<%= experience.images_host%>">
+        </div>        
+        <div class="Images">
+            <label>Title</label>
+            <input type="text" name="experience[images_host][0]" placeholder="host images" value="<%= experience.images_host%>">
+        </div>        
+        <div class="Images">
+            <label>Title</label>
+            <input type="text" name="experience[images_host][0]" placeholder="host images" value="<%= experience.images_host%>">
+        </div>        
+        <div class="Images">
+            <label>Title</label>
+            <input type="text" name="experience[images_host][0]" placeholder="host images" value="<%= experience.images_host%>">
+        </div>        
+        <div class="Images">
+            <label>Title</label>
+            <input type="text" name="experience[images_host][0]" placeholder="host images" value="<%= experience.images_host%>">
+        </div>        
+        <div class="Images">
+            <label>Title</label>
+            <input type="text" name="experience[images_host][0]" placeholder="host images" value="<%= experience.images_host%>">
+        </div>
+        <input class="ui violet big basic button" type="submit">
+        
+    </form>
+</div>
+<%- include("../partials/footer_1") %>

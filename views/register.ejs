@@ -1,0 +1,45 @@
+<%- include("partials/header_1") %>
+
+<div class="ui main text container segment">
+    <!-- <h1>Hello world!</h1> -->
+    <div class="ui huge header"> Become a Host</div>
+    <form class="ui form" action="/register" method="POST">
+        <div class="field">
+            <label>Username</label>
+            <input type="text" name="username" placeholder="username" >
+        </div>
+        <div class="field">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="password" >
+        </div>        
+        <div class="field">
+            <label>Name</label>
+            <input type="text" name="name" placeholder="Name" >
+        </div>
+        <div class="field">
+            <label>Location</label>
+            <input type="text" name="location" placeholder="location" >
+        </div>
+        <div class="field">
+            <label>Language</label>
+            <input type="text" name="language" placeholder="language" >
+        </div>
+        <div class="field">
+            <label>Contact</label>
+            <input type="text" name="contact" placeholder="Contact" >
+        </div>
+        <div class="field">
+            <label>Thumbnail</label>
+            <input type="text" name="thumbnail" placeholder="thumbnail" >
+        </div>
+        <div class="field">
+            <label>Selfintro</label>
+            <textarea type="text" name="selfintro" placeholder="Hey! Introduce yourself to the guests :)"></textarea>
+        </div>
+        <button class="ui violet big basic button">Register</button>
+        <!-- <input class="ui violet big basic button" type="submit"> -->
+        
+    </form>
+</div>
+
+<%- include("partials/footer_1") %>

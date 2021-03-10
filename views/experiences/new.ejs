@@ -1,0 +1,54 @@
+<%- include("../partials/header_1") %>
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center">Create a New Experience!</h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/experiences/" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="title" placeholder="title">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="number" name="price" placeholder="price" min="0.01" step="0.01">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="location" placeholder="location">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="number" name="duration" placeholder="duration">
+                </div>                
+                <div class="form-group">
+                    <input class="form-control" type="number" name="group" placeholder="group">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="language" placeholder="language">
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" type="text" name="description" placeholder="Hey! Introduce the expereince to our guests :)"></textarea>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="images_host1" placeholder="Put some images to describe the foodie experience!">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="images_host2" placeholder="More images 2">
+                </div>               
+                 <div class="form-group">
+                    <input class="form-control" type="text" name="images_host3" placeholder="More images 3">
+                </div>               
+                 <div class="form-group">
+                    <input class="form-control" type="text" name="images_host4" placeholder="More images 4">
+                </div>              
+                  <div class="form-group">
+                    <input class="form-control" type="text" name="images_host5" placeholder="More images 5">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="images_host6" placeholder="More images 6">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                </div>
+            </form>
+            <a href="/experiences">Go Back</a>
+        </div>
+    </div>
+</div>
+<%- include("../partials/footer_1") %>
